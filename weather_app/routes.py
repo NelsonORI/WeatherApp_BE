@@ -1,7 +1,7 @@
 from flask import jsonify, request
 from flask_restful import Resource
 from weather_app import app, api
-from weather_app.scrapper import weather_data
+from weather_app.scrapper import weather_data, today_data
 
 class Home(Resource):
     def get(self):
@@ -14,3 +14,9 @@ class WeatherData(Resource):
         return jsonify(weather_data)
 
 api.add_resource(WeatherData, "/weather")
+
+class TodayData(Resource):
+    def get(self):
+        return jsonify(today_data)
+
+api.add_resource(TodayData, "/today_weather")
