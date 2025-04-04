@@ -10,6 +10,7 @@ requests = "*"
 schedule = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
